@@ -1,0 +1,30 @@
+@mixin tilted($angle, $color) {
+    $height: get-tilted-height($angle);
+
+    position: relative;
+    background-color: $color;
+
+    &::before {
+        background-color: inherit;
+        content: '';
+        padding-top: $height;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        transform: translateY(-50%) skewY($angle);
+        z-index: -1;
+    }
+
+    &::after {
+        background-color: inherit;
+        content: '';
+        padding-top: $height;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: translateY(50%) skewY($angle);  
+        z-index: -1;
+    }
+}

@@ -1,0 +1,64 @@
+
+@function pi() {
+  @return 3.1415926535897932384626433832795028841971693993751;
+}
+
+@function fact($number) {
+  $value: 1;
+
+  @if $number > 0 {
+    @for $i from 1 through $number {
+      $value: $value * $i;
+    }
+  }
+
+  @return $value;
+}
+
+@function pow($number, $exp) {
+  $value: 1;
+
+  @if $exp > 0 {
+    @for $i from 1 through $exp {
+      $value: $value * $number;
+    }
+  } @else if $exp < 0 {
+    @for $i from 1 through -$exp {
+      $value: $value / $number;
+    }
+  }
+
+  @return $value;
+}
+
+@function sin($angle) {
+  $sin: 0;
+  $rad: $angle * pi() * 1rad / 180deg;
+  $angle: $rad / ($rad * 0 + 1);
+
+  @for $i from 0 through 10 {
+    $sin: $sin + pow(-1, $i) * pow($angle, (2 * $i + 1)) / fact(2 * $i + 1);
+  }
+
+  @return $sin;
+}
+
+@function sqrt($number) {
+  $guess: 4; // Guaranteed to be random: http://xkcd.com/221/
+  $root: $guess;
+
+  @for $i from 1 through 50 {
+    $root: $root - (pow($root, 2) - $number) / (2 * $root);
+  }
+
+  @return $root;
+}
+
+@function get-tilted-height($angle) {
+  $a: (100% / 1%);
+  $A: (90deg - $angle);
+  $c: ($a / sin($A));
+  $b: sqrt(pow($c, 2) - pow($a, 2));
+
+  @return (abs($b) * 1%);
+}

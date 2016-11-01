@@ -1,0 +1,9 @@
+.skew-left {
+    @include angled-edge('outside top', 'upper left', $black, 1950, 160);
+    @include angled-edge('outside bottom', 'lower right', $black, 1950, 160);
+}
+
+.skew-right {
+    @include angled-edge('outside top', 'upper right', $black, 1950, 160);
+    @include angled-edge('outside bottom', 'lower left', $black, 1950, 160);
+}
