@@ -13,9 +13,8 @@ var gulp = require('gulp'),
 /* Concat Js */
 gulp.task("concatJs", function() {
     return gulp.src([
-        'js/jquery.js',
-        'js/sticky/jquery.sticky.js',
-        'js/main.js'
+        'js/external/*.js',
+        'js/script.js'
     ])
     .pipe(maps.init())
     .pipe(concat('app.js'))
@@ -58,7 +57,7 @@ gulp.task('openI', function() {
 /* Moves compiled files to production. */
 gulp.task('prod', ['minifyJs', 'compileSass'], function () {
     return gulp.src([
-        'css/application.css', 
+        'css/*.css',        
         'js/app.min.js',
         'index.html',
         'img/**', 
