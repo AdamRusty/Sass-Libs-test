@@ -1,18 +1,12 @@
-/* External resources */
-/* Variables */
-/* hexa colours */
-/* rgba colours  */
-/* misc */
-/* flexboxes */
-/* Functions */
-/* Mixins */
-/* Layouts */
 html {
   font-size: 10px; }
 
-/* Blocks */
+a {
+  color: #000;
+  text-decoration: none; }
+
 header {
-  background-color: rgba(255, 0, 0, 0.9);
+  background-color: rgba(229, 77, 66, 0.8);
   width: 100%;
   height: 80px;
   color: #fff;
@@ -23,30 +17,67 @@ header {
 
 .header-wrapper {
   width: 80%;
+  height: inherit;
   display: flex;
   justify-content: space-between;
   position: relative;
-  margin: 0 auto; }
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-top: 2rem; }
 
-.header-wrapper h1 {
-  margin: 3rem 6rem; }
+.header-wrapper .logo {
+  margin: 0rem 6rem;
+  background-image: url(../../images/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 32px;
+  min-width: 160px; }
 
 .header-wrapper nav {
   display: flex;
   width: 50%;
+  min-width: 700px;
   font-size: 2.1rem;
-  margin: 25px 0;
   margin-right: 4rem;
   justify-content: space-around; }
 
 .header-wrapper a {
   color: #fff;
-  text-decoration: none;
   margin-left: 20px; }
+
+.logo a {
+  width: 100%; }
+
+section h2,
+.slides h2 {
+  font-size: 2.3rem;
+  text-align: center;
+  padding-top: 2.5rem; }
+
+section p,
+.slides p {
+  font-size: 2rem; }
+
+.bg {
+  position: relative;
+  background-position: top;
+  background-image: url(../../images/ux-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 160%;
+  z-index: -10;
+  top: -140px; }
+
+.pre-footer-bg {
+  height: 580px;
+  background-position: top;
+  top: -415px;
+  overflow: hidden; }
 
 .pre-footer {
   position: relative;
-  background-color: red;
+  background-color: #e54d42;
   height: 250px; }
   .pre-footer::before {
     background-color: inherit;
@@ -68,28 +99,95 @@ header {
     bottom: 0;
     transform: translateY(50%) skewY(5deg);
     z-index: -1; }
+  .pre-footer .content {
+    width: 60%;
+    margin: auto;
+    text-align: center; }
+  .pre-footer .btn {
+    position: relative;
+    top: 40px; }
 
-/* Elements */
+.slides {
+  height: 580px;
+  position: relative;
+  top: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 100px 0 300px;
+  overflow: hidden;
+  box-sizing: border-box; }
+  .slides .slide {
+    width: 100%;
+    vertical-align: top;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    background-color: rgba(228, 0, 133, 0.6);
+    box-sizing: border-box;
+    color: #fff; }
+    .slides .slide .content {
+      padding: 12rem 0;
+      width: 100%;
+      height: 75%;
+      background-color: rgba(228, 0, 133, 0.5); }
+    .slides .slide p {
+      max-width: 60%;
+      margin: 0 auto;
+      padding-top: 1.6rem; }
+
+.slick-dots li {
+  list-style: none;
+  display: inline-block;
+  margin: 5px; }
+  .slick-dots li button {
+    width: 20px;
+    height: 20px;
+    background-color: #c0c0c0;
+    border-radius: 50%;
+    box-sizing: border-box; }
+
+.slick-dots li button:hover,
+.slick-dots .slick-active button {
+  transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  /* IE 9 */
+  -webkit-transform: scale(1.4);
+  /* Chrome, Safari, Opera */ }
+
+.slick-dots li button::before {
+  content: ""; }
+
+.slides .content-body a.button:hover {
+  background-color: #fff; }
+
 section {
-  height: 480px;
+  height: 680px;
   width: 100%;
-  background-color: #000;
-  margin: 400px 0;
-  color: white; }
+  color: #fff;
+  background-color: #000; }
 
-section h2 {
-  font-size: 2.3rem;
-  text-align: center;
-  padding-top: 2.5rem; }
+main section {
+  margin: 200px 0; }
+  main section div {
+    padding: 100px;
+    height: 100%;
+    background-color: rgba(228, 0, 133, 0.6);
+    box-sizing: border-box; }
 
-section p {
-  font-size: 1.2rem; }
+.has-image {
+  background-image: url(../../images/ux-background.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat; }
 
+.odd,
 .skew-left {
   position: relative;
   position: relative; }
+  .odd::before,
   .skew-left::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='160' width='1950' fill='rgb(0,0,0)' fill-opacity='1'%3E%3Cpolygon points='0,160 1950,160 1950,0'%3E%3C/polygon%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='160' width='1950' fill='rgb(255,255,255)' fill-opacity='1'%3E%3Cpolygon points='0,0 1950,160 1950,0'%3E%3C/polygon%3E%3C/svg%3E");
     background-position: center center;
     background-repeat: no-repeat;
     content: '';
@@ -99,9 +197,10 @@ section p {
     right: 0;
     width: 100%;
     z-index: 1;
-    top: -160px; }
+    top: 0; }
+  .odd::after,
   .skew-left::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='160' width='1950' fill='rgb(0,0,0)' fill-opacity='1'%3E%3Cpolygon points='0,0 1950,0 0,160'%3E%3C/polygon%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='160' width='1950' fill='rgb(255,255,255)' fill-opacity='1'%3E%3Cpolygon points='0,160 1950,160 0,0'%3E%3C/polygon%3E%3C/svg%3E");
     background-position: center center;
     background-repeat: no-repeat;
     content: '';
@@ -111,13 +210,15 @@ section p {
     right: 0;
     width: 100%;
     z-index: 1;
-    bottom: -160px; }
+    bottom: 0; }
 
+.even,
 .skew-right {
   position: relative;
   position: relative; }
+  .even::before,
   .skew-right::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='160' width='1950' fill='rgb(0,0,0)' fill-opacity='1'%3E%3Cpolygon points='0,160 1950,160 0,0'%3E%3C/polygon%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='160' width='1950' fill='rgb(255,255,255)' fill-opacity='1'%3E%3Cpolygon points='0,0 1950,0 0,160'%3E%3C/polygon%3E%3C/svg%3E");
     background-position: center center;
     background-repeat: no-repeat;
     content: '';
@@ -127,9 +228,10 @@ section p {
     right: 0;
     width: 100%;
     z-index: 1;
-    top: -160px; }
+    top: 0; }
+  .even::after,
   .skew-right::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='160' width='1950' fill='rgb(0,0,0)' fill-opacity='1'%3E%3Cpolygon points='0,0 1950,160 1950,0'%3E%3C/polygon%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='160' width='1950' fill='rgb(255,255,255)' fill-opacity='1'%3E%3Cpolygon points='0,160 1950,160 1950,0'%3E%3C/polygon%3E%3C/svg%3E");
     background-position: center center;
     background-repeat: no-repeat;
     content: '';
@@ -139,6 +241,25 @@ section p {
     right: 0;
     width: 100%;
     z-index: 1;
-    bottom: -160px; }
+    bottom: 0; }
+
+.btn {
+  height: 80px;
+  max-width: 280px;
+  width: 60%;
+  background-color: transparent;
+  border: 2px solid #fff;
+  font-size: 1.6rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 1.6rem;
+  border-radius: 5px;
+  font-weight: 700; }
+  .btn:hover {
+    color: #e54d42;
+    background-color: #fff; }
+
+li {
+  list-style: none; }
 
 /*# sourceMappingURL=app.css.map */

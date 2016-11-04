@@ -1,9 +1,11 @@
+.odd,
 .skew-left {
-    @include angled-edge('outside top', 'upper left', $black, 1950, 160);
-    @include angled-edge('outside bottom', 'lower right', $black, 1950, 160);
+        @include angled-edge('inside top', 'lower left', $white, 1950, 160);
+        @include angled-edge('inside bottom', 'upper right', $white, 1950, 160);
 }
 
-.skew-right {
-    @include angled-edge('outside top', 'upper right', $black, 1950, 160);
-    @include angled-edge('outside bottom', 'lower left', $black, 1950, 160);
+.even,
+.skew-right {        
+        @include angled-edge('inside top', 'lower right', $white, 1950, 160);
+        @include angled-edge('inside bottom', 'upper left', $white, 1950, 160);
 }

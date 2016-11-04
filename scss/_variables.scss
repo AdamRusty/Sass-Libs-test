@@ -1,18 +1,38 @@
-/* hexa colours */
+// Hexa colours
 $white: #fff;
 $black: #000;
-$red: #f00;
+$red: rgb(229, 77, 66);
 
-/* rgba colours  */
+// Black opacites
+$black80: rgba(0,0,0,.8);
+$black60: rgba(0,0,0,.6);
+$black50: rgba(0,0,0,.5);
+$black40: rgba(0,0,0,.4);
 
+// Red opacites
+$red80: rgba(229, 77, 66,.8);
+$red60: rgba(229, 77, 66,.6);
+$red50: rgba(229, 77, 66,.5);
+$red40: rgba(229, 77, 66,.4);
 
-/* misc */
+// Red opacites
+$green80: rgba(228, 0, 133,.8);
+$green60: rgba(228, 0, 133,.6);
+$green50: rgba(228, 0, 133,.5);
+$green40: rgba(228, 0, 133,.4);
+
+// Misc
 $fix: fixed;
 $a: auto;
 $n: none;
 $h: hidden;
+$t: transparent;
 
 
-/* flexboxes */
+// Flexboxes
 $sp-a: space-around;
 $sp-b: space-between;
+
+
+// Borders
+$white2s: 2px solid $white;

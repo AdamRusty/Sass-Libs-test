@@ -1,27 +1,29 @@
-/* External resources */
-
+// External resources
 @import "external/angled-edges";
 
-/* Variables */
+// Variables
 @import "variables";
 
-/* Functions */
+// Functions
 @import "functions/tilted";
 
-/* Mixins */
-
+// Mixins
 @import "mixins/tilted";
 
-/* Layouts */
+// Layouts
 @import "layout/index";
 
-/* Blocks */
+// Blocks
 @import "blocks/header";
 @import "blocks/main";
+@import "blocks/content";
 @import "blocks/pre-footer";
 @import "blocks/footer";
+@import "blocks/slick";
 
-/* Elements */
+// Elements
 @import "elements/header";
 @import "elements/section";
 @import "elements/skews";
+@import "elements/buttons";
+@import "elements/lists";

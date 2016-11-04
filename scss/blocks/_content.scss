@@ -1,0 +1,30 @@
+section h2, 
+.slides h2 {
+    font-size: 2.3rem;
+    text-align: center;
+    padding-top: 2.5rem;
+}
+
+section p,
+.slides p{
+    font-size: 2rem;
+}
+
+.bg {
+    position: relative;
+    background-position: top;
+    background-image: url(../../images/ux-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 160%;
+    z-index: -10;
+    top: -140px;
+}
+
+.pre-footer-bg {
+    height: 580px;
+    background-position: top;
+    top: -415px;
+    overflow: hidden;
+}

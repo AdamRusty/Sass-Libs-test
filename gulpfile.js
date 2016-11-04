@@ -60,7 +60,7 @@ gulp.task('prod', ['minifyJs', 'compileSass'], function () {
         'css/*.css',        
         'js/app.min.js',
         'index.html',
-        'img/**', 
+        'images/**', 
         'fonts/**'
     ],                    
 /* Retain file structure */
