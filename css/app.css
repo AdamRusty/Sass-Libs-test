@@ -27,7 +27,7 @@ header {
 
 .header-wrapper .logo {
   margin: 0rem 6rem;
-  background-image: url(../../images/logo.png);
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Wi-Fi_Logo.svg/1280px-Wi-Fi_Logo.svg.png);
   background-size: contain;
   background-repeat: no-repeat;
   height: 32px;
@@ -57,23 +57,6 @@ section h2,
 section p,
 .slides p {
   font-size: 2rem; }
-
-.bg {
-  position: relative;
-  background-position: top;
-  background-image: url(../../images/ux-background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 160%;
-  z-index: -10;
-  top: -140px; }
-
-.pre-footer-bg {
-  height: 580px;
-  background-position: top;
-  top: -415px;
-  overflow: hidden; }
 
 .pre-footer {
   position: relative;
@@ -176,9 +159,9 @@ main section {
     box-sizing: border-box; }
 
 .has-image {
-  background-image: url(../../images/ux-background.jpg);
+  background-image: url(https://www.walldevil.com/wallpapers/a93/wheat-field-hill-meadow-tree.jpg);
   background-size: cover;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat; }
 
 .odd,
